@@ -1,0 +1,129 @@
+%-------------------------
+% Shivang Gupta - DevOps Engineer Resume (1 Page)
+%-------------------------
+
+\documentclass[11pt, letterpaper]{article}
+
+\usepackage[
+    top=0.6in,
+    bottom=0.6in,
+    left=0.6in,
+    right=0.6in
+]{geometry}
+
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% Custom Colors for Links
+\definecolor{linkblue}{RGB}{25,70,160}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=linkblue
+}
+
+% Page Setup
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% Jake's Template Section Formatting (Removed \bfseries to fix the font shape error)
+\titleformat{\section}{\vspace{-4pt}\scshape\raggedright\large}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Itemize spacing (no enumitem; TeX Live basic)
+\makeatletter
+\def\@listi{%
+  \leftmargin\leftmargini
+  \topsep 4pt \@plus 1pt \@minus 1pt
+  \parsep 0pt
+  \itemsep 3pt \@plus 1pt \@minus 1pt
+  \partopsep 0pt
+}
+\makeatother
+\setlength{\leftmargini}{0.15in}
+
+%-------------------------
+\begin{document}
+
+\begin{center}
+    {\LARGE \textbf{Shivangi Gupta}} \\ \vspace{4pt}
+    Delhi, India \;|\;
+    \href{mailto:shivanggupta2611@gmail.com}{shivanggupta2611@gmail.com} \;|\;
+    +918081260068 \\ \vspace{2pt}
+    \href{https://shivanggupta.in}{shivanggupta.in} \;|\;
+    \href{https://linkedin.com/in/shivang21007}{linkedin.com/in/shivang21007} \;|\;
+    \href{https://github.com/shivang21007}{github.com/shivang21007}
+\end{center}
+
+%-------------------------
+\section*{Professional Summary}
+\vspace{2pt}
+DevOps Engineer specializing in Kubernetes, Infrastructure as Code, CI/CD automation, and production observability. Experienced in designing scalable cloud-native systems on AWS, improving reliability, optimizing infrastructure cost, and building resilient backend services. Strong foundation in Linux internals, system debugging, and distributed systems.
+
+%-------------------------
+\section*{Experience}
+
+\vspace{2pt}
+\textbf{DevOps Engineer} $|$ \emph{Octro Inc., Noida} \hfill Sept 2024 -- Present
+\begin{itemize}
+    \item Architected and operated Kubernetes production workloads with rolling deployments, resource optimization, health probes, and service networking.
+    \item Designed Infrastructure as Code using Terraform across AWS (EC2, EBS, IAM, S3, Route53, CloudWatch), reducing manual provisioning by 70\%.
+    \item Built CI/CD pipelines using GitHub Actions and Docker enabling automated builds, security scanning, and zero-downtime deployments.
+    \item Implemented observability stack using Prometheus, Grafana, and OpenTelemetry; improved MTTR through actionable alerting and metrics-driven debugging.
+    \item Engineered PXE + Kickstart automated provisioning for bare-metal servers, reducing OS deployment time by 90\%.
+    \item Developed Python-based SMART disk monitoring across 100+ servers, proactively preventing hardware-related production incidents.
+    \item Automated encrypted MySQL backup pipelines with retention and archival integration for long-term durability.
+\end{itemize}
+
+%-------------------------
+\section*{Project}
+
+\vspace{2pt}
+\textbf{ScanX -- Enterprise Monitoring \& Compliance Platform} \hfill \href{https://github.com/shivang21007/scanx}{GitHub}
+\begin{itemize}
+    \item Designed cross-platform Go agent integrating osquery for deep system inventory and secure telemetry ingestion.
+    \item Built scalable backend using Node.js and TypeScript with JWT authentication and RBAC authorization.
+    \item Implemented compliance checks (disk encryption, firewall, antivirus, screen-lock) across macOS, Windows, and Linux endpoints.
+    \item Containerized and deployed platform using Docker with reverse proxy configuration and production scaling strategy.
+    \item Enabled centralized monitoring of 200+ employee systems, reducing third-party MDM dependency and improving data control.
+\end{itemize}
+
+%-------------------------
+\section*{Technical Skills}
+
+\vspace{2pt}
+\begin{list}{}{%
+    \setlength{\leftmargin}{0pt}%
+    \setlength{\itemindent}{0pt}%
+    \setlength{\labelwidth}{0pt}%
+    \setlength{\labelsep}{0pt}%
+    \setlength{\topsep}{2pt}%
+    \setlength{\itemsep}{2pt}%
+    \setlength{\parsep}{0pt}%
+}
+    \item \textbf{Cloud \& DevOps:} Kubernetes, Docker, Terraform, GitHub Actions, CI/CD, GitOps, AWS, Linux, Infrastructure as Code
+    \item \textbf{Observability:} Prometheus, Grafana, OpenTelemetry, Alerting, Monitoring Pipelines
+    \item \textbf{Programming:} C, Python, TypeScript, Bash, YAML
+    \item \textbf{Backend:} REST APIs, Microservices Architecture, MySQL, Redis, System Design Fundamentals
+\end{list}
+
+%-------------------------
+\section*{Education}
+
+\vspace{2pt}
+\textbf{B.Tech in Computer Science and Engineering} \hfill 2021 -- 2025 \\
+\textit{G.L. Bajaj Institute of Technology and Management, Greater Noida} 
+
+
+%-------------------------
+\section*{Certifications}
+
+\vspace{2pt}
+\begin{itemize}
+    \item AWS Beginner to Intermediate (EC2, IAM, S3, ELB, ASG)
+    \item Docker: Containerization for Modern Development
+\end{itemize}
+
+\end{document}
