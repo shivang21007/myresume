@@ -77,3 +77,65 @@ Previously worked in Product based company/start-up experience preferred.
 
 
 Join our team as an SRE and contribute to the stability and performance of our technology infrastructure. Help us ensure an exceptional user experience for our customers while driving continuous improvements in system reliability and scalability.
+
+--------------
+--------------
+
+# NetApp - DevOps Engineer
+
+Title:  DevOps Engineer
+Location:  IN
+Requisition ID:  134942
+Job Summary
+We are seeking a motivated and detail-oriented DevOps Engineer (IC2) to join our engineering team. In this role, you will play a key part in building, automating, and securing our CI/CD pipelines, supporting cloud-native infrastructure, and driving operational excellence. You will work closely with development, release, and security teams to enable fast, reliable, and secure software delivery. If you are passionate about automation, cloud technologies, and continuous improvement, we'd love to hear from you.
+
+Job Requirements
+CI/CD Pipeline Development & Automation
+
+Assist in designing, developing, and maintaining CI/CD pipelines using tools such as Jenkins, TeamCity, ArgoCD, GitLab CI, or GitHub Actions
+Develop and maintain Helm Charts for Kubernetes deployments
+Integrate quality gates, testing frameworks, code quality tools, and security scanners into pipelines
+Integrate image signing and build integrity checks into CI/CD workflows
+Develop and maintain automation scripts using Python, Bash, and GroovyMonitor pipeline health, troubleshoot failures, and resolve performance bottlenecks
+Support development and release teams with build, test, and deployment automation
+Security Integration (Shift-Left)
+
+Assist in integrating security scanning tools (SAST, DAST, SCA, container scanning) into CI/CD workflows
+Support vulnerability identification and remediation efforts aligned with OWASP Top 10
+Contribute to Infrastructure as Code (IaC) scanning and policy enforcement
+Cloud & Container Infrastructure
+
+Support management of cloud environments on Azure, AWS, and GCP
+Deploy and maintain Docker containers and Kubernetes workloads (including pod/deployment management and Azure Container Service)
+Support Infrastructure as Code practices using Terraform or CloudFormation
+Monitoring & Operations
+
+Assist in implementing and maintaining monitoring and alerting using Cloud
+Watch, Prometheus, Grafana, or ELK
+Support incident response, root cause analysis (RCA), and documentation of findings
+Monitor the daily state of CI environments and contribute to weekly status reports
+What You BringMinimum Qualifications
+
+Bachelor's degree in Computer Science, Information Security, or a related field
+2+ years of hands-on experience in DevOps, DevSecOps, or a related engineering role
+Working experience with at least one CI/CD tool — Jenkins, TeamCity, ArgoCD, GitLab CI, or GitHub Actions
+Proficiency in scripting languages — Python, Bash, GroovyFamiliarity with Linux environments and command-line operations
+Knowledge of Git and Bitbucket and version control best practices (branching strategies, Git workflows)
+Experience with Docker, Kubernetes, Helm Charts, and basic containerization concepts
+Familiarity with Azure cloud platform
+Ability to work in a dynamic, agile team environment
+Preferred Qualifications
+
+Proven track record of AI integration with CI/CD pipelines
+Experience with Infrastructure as Code tools (Terraform or CloudFormation)
+Understanding of security scanning tools — SonarQube, Trivy, Wiz, ArmorCode
+Awareness of security frameworks such as OWASP Top 10, NIST, or CIS benchmarks
+Experience with Groovy (Jenkins shared libraries) or YAML-based pipeline definitionsExposure to monitoring tools — Prometheus, Grafana, CloudWatch, or ELKUnderstanding of Agile/Scrum methodologies
+Good to Have
+
+Basic awareness of AI/ML tools (Claude, Gemini, GPT models) and their application in DevOps
+
+Exposure to secrets management tools (AWS Secrets Manager, HashiCorp Vault)
+
+Education
+Typically requires a minimum of 2 years of related experience.

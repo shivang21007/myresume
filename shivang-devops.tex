@@ -1,14 +1,14 @@
 %-------------------------
-% Shivang Gupta - DevOps Engineer Resume (1 Page)
+% Shivang Gupta - DevOps Engineer Resume
 %-------------------------
 
 \documentclass[11pt, letterpaper]{article}
 
 \usepackage[
-    top=0.6in,
-    bottom=0.6in,
-    left=0.6in,
-    right=0.6in
+    top=0.2in,
+    bottom=0.2in,
+    left=0.4in,
+    right=0.4in
 ]{geometry}
 
 \usepackage{titlesec}
@@ -18,7 +18,7 @@
 \usepackage{lmodern}
 
 % Custom Colors for Links
-\definecolor{linkblue}{RGB}{25,70,160}
+\definecolor{linkblue}{rgb}{0.1, 0.27, 0.63}
 \hypersetup{
     colorlinks=true,
     urlcolor=linkblue
@@ -29,30 +29,29 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
 
-% Jake's Template Section Formatting (Removed \bfseries to fix the font shape error)
-\titleformat{\section}{\vspace{-4pt}\scshape\raggedright\large}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\titleformat{\section}{\vspace{-5pt}\scshape\raggedright\large}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Itemize spacing (no enumitem; TeX Live basic)
-\makeatletter
-\def\@listi{%
-  \leftmargin\leftmargini
-  \topsep 4pt \@plus 1pt \@minus 1pt
-  \parsep 0pt
-  \itemsep 3pt \@plus 1pt \@minus 1pt
-  \partopsep 0pt
-}
-\makeatother
+
 \setlength{\leftmargini}{0.15in}
+
+% Itemize spacing patch
+% Itemize spacing
+\makeatletter
+% Itemize spacing patch
+\let\olditemize\itemize
+\def\itemize{\olditemize\itemsep=2pt \parsep=0pt \parskip=0pt \topsep=2pt}
+
+\makeatother
 
 %-------------------------
 \begin{document}
 
 \begin{center}
-    {\LARGE \textbf{Shivangi Gupta}} \\ \vspace{4pt}
+    {\LARGE \textbf{Shivang Gupta}} \\ \vspace{2pt}
     Delhi, India \;|\;
     \href{mailto:shivanggupta2611@gmail.com}{shivanggupta2611@gmail.com} \;|\;
     +918081260068 \\ \vspace{2pt}
-    \href{https://shivanggupta.in}{shivanggupta.in} \;|\;
+    % \href{https://shivanggupta.in}{shivanggupta.in} \;|\;
     \href{https://linkedin.com/in/shivang21007}{linkedin.com/in/shivang21007} \;|\;
     \href{https://github.com/shivang21007}{github.com/shivang21007}
 \end{center}
@@ -60,7 +59,7 @@
 %-------------------------
 \section*{Professional Summary}
 \vspace{2pt}
-DevOps Engineer specializing in Kubernetes, Infrastructure as Code, CI/CD automation, and production observability. Experienced in designing scalable cloud-native systems on AWS, improving reliability, optimizing infrastructure cost, and building resilient backend services. Strong foundation in Linux internals, system debugging, and distributed systems.
+DevOps \& Site Reliability Engineer with hands-on experience in Kubernetes, Terraform, CI/CD, and AWS. Proven track record in building scalable cloud-native infrastructure, reliability, optimizing infrastructure cost, and automating workflows to ensure highly reliable production systems.
 
 %-------------------------
 \section*{Experience}
@@ -68,30 +67,36 @@ DevOps Engineer specializing in Kubernetes, Infrastructure as Code, CI/CD automa
 \vspace{2pt}
 \textbf{DevOps Engineer} $|$ \emph{Octro Inc., Noida} \hfill Sept 2024 -- Present
 \begin{itemize}
-    \item Architected and operated Kubernetes production workloads with rolling deployments, resource optimization, health probes, and service networking.
-    \item Designed Infrastructure as Code using Terraform across AWS (EC2, EBS, IAM, S3, Route53, CloudWatch), reducing manual provisioning by 70\%.
-    \item Built CI/CD pipelines using GitHub Actions and Docker enabling automated builds, security scanning, and zero-downtime deployments.
-    \item Implemented observability stack using Prometheus, Grafana, and OpenTelemetry; improved MTTR through actionable alerting and metrics-driven debugging.
-    \item Engineered PXE + Kickstart automated provisioning for bare-metal servers, reducing OS deployment time by 90\%.
-    \item Developed Python-based SMART disk monitoring across 100+ servers, proactively preventing hardware-related production incidents.
-    \item Automated encrypted MySQL backup pipelines with retention and archival integration for long-term durability.
+    \item Orchestrated scalable Kubernetes production workloads, leveraging rolling deployments, autoscaling (HPA), and ingress controllers to ensure high availability for microservices.
+    \item Provisioned AWS infrastructure (EC2, S3, IAM, Route53) using Terraform, establishing Infrastructure as Code (IaC) and reducing manual provisioning effort by 70\%.
+    \item Engineered robust CI/CD pipelines via GitHub Actions and GitOps workflows, cutting deployment time by 50\% and achieving automated, zero-downtime releases.
+    \item Deployed a centralized observability stack (Prometheus, Grafana, Loki, OpenTelemetry), streamlining production troubleshooting and decreasing MTTR by $\sim$40\%.
+    \item Automated toil-heavy operations and infrastructure workflows using Python and Bash, alongside implementing automated, encrypted MySQL backups for disaster recovery.
+    \item Integrated Trivy container scanning and compliance validations into deployment pipelines to significantly harden the platform's security posture.
 \end{itemize}
 
 %-------------------------
-\section*{Project}
+\section*{Projects}
 
 \vspace{2pt}
-\textbf{ScanX -- Enterprise Monitoring \& Compliance Platform} \hfill \href{https://github.com/shivang21007/scanx}{GitHub}
+\textbf{Production-Grade GitOps CI/CD \& Observability Platform}
 \begin{itemize}
-    \item Designed cross-platform Go agent integrating osquery for deep system inventory and secure telemetry ingestion.
-    \item Built scalable backend using Node.js and TypeScript with JWT authentication and RBAC authorization.
-    \item Implemented compliance checks (disk encryption, firewall, antivirus, screen-lock) across macOS, Windows, and Linux endpoints.
-    \item Containerized and deployed platform using Docker with reverse proxy configuration and production scaling strategy.
-    \item Enabled centralized monitoring of 200+ employee systems, reducing third-party MDM dependency and improving data control.
+    \item Architected an end-to-end GitOps delivery platform using ArgoCD, Kubernetes, and Terraform for declarative infrastructure and automated application deployments.
+    \item Developed CI/CD workflows via GitHub Actions featuring automated rollback, SAST, and Trivy container scanning for secure and consistent releases.
+    \item Engineered a full-stack observability solution integrating Prometheus, Grafana, Loki, and OpenTelemetry for comprehensive metric tracking and distributed tracing.
+    \item Configured robust alerting pipelines and custom dashboards to monitor application health, latency, and resource saturation across Kubernetes clusters.
+\end{itemize}
+
+\vspace{4pt}
+\textbf{Kubernetes Reliability \& Monitoring Lab}
+\begin{itemize}
+    \item Built a production-grade Kubernetes cluster to simulate complex environments, focusing on reliability engineering, advanced networking, and persistent storage.
+    \item Configured readiness/liveness probes, namespace isolation, and workload autoscaling to enforce best practices in resource management and fault tolerance.
+    \item Executed chaos engineering scenarios (node/pod failures) to validate incident response strategies, service recovery, and alerting pipelines via Prometheus.
 \end{itemize}
 
 %-------------------------
-\section*{Technical Skills}
+\section*{Skills}
 
 \vspace{2pt}
 \begin{list}{}{%
@@ -103,10 +108,7 @@ DevOps Engineer specializing in Kubernetes, Infrastructure as Code, CI/CD automa
     \setlength{\itemsep}{2pt}%
     \setlength{\parsep}{0pt}%
 }
-    \item \textbf{Cloud \& DevOps:} Kubernetes, Docker, Terraform, GitHub Actions, CI/CD, GitOps, AWS, Linux, Infrastructure as Code
-    \item \textbf{Observability:} Prometheus, Grafana, OpenTelemetry, Alerting, Monitoring Pipelines
-    \item \textbf{Programming:} C, Python, TypeScript, Bash, YAML
-    \item \textbf{Backend:} REST APIs, Microservices Architecture, MySQL, Redis, System Design Fundamentals
+    \item \textbf{Technical Skills:} Kubernetes,\hspace{2pt} Docker,\hspace{2pt} Terraform,\hspace{2pt} AWS,\hspace{2pt} GitHub Actions,\hspace{2pt} ArgoCD,\hspace{2pt} GitOps,\hspace{2pt} Linux,\hspace{2pt} CI/CD,\hspace{2pt} Prometheus,\hspace{2pt} Grafana,\hspace{2pt} Loki,\hspace{2pt} OpenTelemetry,\hspace{2pt} Python,\hspace{2pt} Bash,\hspace{2pt} MySQL,\hspace{2pt} Redis,\hspace{2pt} Infrastructure as Code,\hspace{2pt} Observability,\hspace{2pt} Monitoring,\hspace{2pt} Incident Response,\hspace{2pt} SLI/SLO/SLA,\hspace{2pt} Root Cause Analysis,\hspace{2pt} Distributed Systems
 \end{list}
 
 %-------------------------
@@ -114,16 +116,6 @@ DevOps Engineer specializing in Kubernetes, Infrastructure as Code, CI/CD automa
 
 \vspace{2pt}
 \textbf{B.Tech in Computer Science and Engineering} \hfill 2021 -- 2025 \\
-\textit{G.L. Bajaj Institute of Technology and Management, Greater Noida} 
-
-
-%-------------------------
-\section*{Certifications}
-
-\vspace{2pt}
-\begin{itemize}
-    \item AWS Beginner to Intermediate (EC2, IAM, S3, ELB, ASG)
-    \item Docker: Containerization for Modern Development
-\end{itemize}
+\textit{G.L. Bajaj Institute of Technology and Management, Greater Noida}
 
 \end{document}

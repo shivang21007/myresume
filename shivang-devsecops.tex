@@ -1,0 +1,132 @@
+%-------------------------
+% Shivang Gupta - DevSecOps Engineer Resume
+%-------------------------
+
+\documentclass[11pt, letterpaper]{article}
+
+\usepackage[
+    top=0.2in,
+    bottom=0.2in,
+    left=0.4in,
+    right=0.4in
+]{geometry}
+
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% Custom Colors for Links
+\definecolor{linkblue}{rgb}{0.1, 0.27, 0.63}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=linkblue
+}
+
+% Page Setup
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\titleformat{\section}{\vspace{-5pt}\scshape\raggedright\large}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+
+\setlength{\leftmargini}{0.15in}
+
+% Itemize spacing patch
+% Itemize spacing
+\makeatletter
+% Itemize spacing patch
+\let\olditemize\itemize
+\def\itemize{\olditemize\itemsep=2pt \parsep=0pt \parskip=0pt \topsep=2pt}
+
+\makeatother
+
+%-------------------------
+\begin{document}
+
+\begin{center}
+    {\LARGE \textbf{Shivang Gupta}} \\ \vspace{2pt}
+    Delhi, India \;|\;
+    \href{mailto:shivanggupta2611@gmail.com}{shivanggupta2611@gmail.com} \;|\;
+    +918081260068 \\ \vspace{2pt}
+    % \href{https://shivanggupta.in}{shivanggupta.in} \;|\;
+    \href{https://linkedin.com/in/shivang21007}{linkedin.com/in/shivang21007} \;|\;
+    \href{https://github.com/shivang21007}{github.com/shivang21007}
+\end{center}
+
+%-------------------------
+\section*{Professional Summary}
+\vspace{2pt}
+DevSecOps \& Site Reliability Engineer with hands-on experience in embedding security into every stage of the software delivery lifecycle. Proven track record in building secure CI/CD pipelines with SAST, container scanning, and secret detection; managing Kubernetes workloads; and automating cloud infrastructure with Terraform and AWS to deliver hardened, production-grade systems.
+
+%-------------------------
+\section*{Experience}
+
+\vspace{2pt}
+\textbf{DevOps Engineer} $|$ \emph{Octro Inc., Noida} \hfill Sept 2024 -- Present
+\begin{itemize}
+    \item Integrated Trivy container scanning, Snyk dependency analysis, and compliance validations into CI/CD pipelines, identifying and remediating vulnerabilities before production deployment.
+    \item Engineered secure CI/CD pipelines via GitHub Actions and GitOps workflows with automated security gates, cutting deployment time by 50\% while achieving zero-downtime, policy-compliant releases.
+    \item Orchestrated scalable Kubernetes production workloads, leveraging rolling deployments, autoscaling (HPA), and ingress controllers to ensure high availability for microservices.
+    \item Provisioned AWS infrastructure (EC2, S3, IAM, Route53) using Terraform with least-privilege IAM policies and encrypted state management, reducing manual provisioning effort by 70\%.
+    \item Deployed a centralized observability stack (Prometheus, Grafana, Loki, OpenTelemetry) with security-focused alerting, streamlining production troubleshooting.
+    \item Automated toil-heavy operations and infrastructure workflows using Python and Bash, alongside implementing automated, encrypted MySQL backups for disaster recovery.
+\end{itemize}
+
+%-------------------------
+\section*{Projects}
+
+\vspace{2pt}
+\textbf{SkillPulse -- Production DevSecOps Pipeline on Kubernetes} \hfill \href{https://skillpulse.shivanggupta.in}{\textit{Live}}
+\begin{itemize}
+    \item Built and deployed a production-grade 3-tier application (HTML/CSS/JS, Golang/Gin, MySQL) on Kubernetes with a fully automated DevSecOps CI/CD pipeline via GitHub Actions.
+    \item Implemented multi-layered security scanning in CI: golangci-lint (SAST), Gitleaks (secret detection), govulncheck (dependency CVE scanning), Hadolint (Dockerfile linting), and Trivy (container image scanning).
+    \item Aggressively optimized Docker images using multi-stage builds and scratch runtime images, reducing frontend image from 92\,MB to 20\,MB and backend from 34\,MB to 12\,MB.
+    \item Configured Kubernetes rolling deployments with HPA-based autoscaling, achieving fully automated code-to-production delivery with security validation at every gate.
+\end{itemize}
+
+\vspace{4pt}
+\textbf{End-to-End DevSecOps CI/CD Pipeline} \hfill \href{http://a1.shivanggupta.in}{\textit{Live}}
+\begin{itemize}
+    \item Architected a complete DevSecOps pipeline from scratch for a React/Node.js application, deploying on a VPS via Docker Compose with fully automated CI/CD through GitHub Actions.
+    \item Embedded security-first workflow: SAST checks (Lint + Snyk), dependency vulnerability scanning, secret leak detection, Dockerfile linting (Hadolint), and Trivy container scanning -- all as automated pipeline gates.
+    \item Identified and remediated 19 High and 2 Critical vulnerabilities by hardening base images and optimizing dependency layers before production deployment.
+    \item Achieved a zero-manual-step delivery flow: Code $\rightarrow$ Security Checks $\rightarrow$ Image Build $\rightarrow$ Vulnerability Scan $\rightarrow$ Deployment.
+\end{itemize}
+
+\vspace{4pt}
+\textbf{Production-Grade GitOps CI/CD \& Observability Platform}
+\begin{itemize}
+    \item Architected an end-to-end GitOps delivery platform using ArgoCD, Kubernetes, and Terraform for declarative infrastructure and automated application deployments.
+    \item Developed CI/CD workflows via GitHub Actions featuring automated rollback, SAST, and Trivy container scanning for secure and consistent releases.
+    \item Engineered a full-stack observability solution integrating Prometheus, Grafana, Loki, and OpenTelemetry for comprehensive metric tracking and distributed tracing.
+    \item Configured robust alerting pipelines and custom dashboards to monitor application health, latency, and resource saturation across Kubernetes clusters.
+\end{itemize}
+
+%-------------------------
+\section*{Skills}
+
+\vspace{2pt}
+\begin{list}{}{%
+    \setlength{\leftmargin}{0pt}%
+    \setlength{\itemindent}{0pt}%
+    \setlength{\labelwidth}{0pt}%
+    \setlength{\labelsep}{0pt}%
+    \setlength{\topsep}{2pt}%
+    \setlength{\itemsep}{2pt}%
+    \setlength{\parsep}{0pt}%
+}
+    \item \textbf{Security \& DevSecOps:} Trivy,\hspace{2pt} Snyk,\hspace{2pt} Gitleaks,\hspace{2pt} Hadolint,\hspace{2pt} SAST,\hspace{2pt} Container Scanning,\hspace{2pt} Secret Detection,\hspace{2pt} Dependency Vulnerability Scanning,\hspace{2pt} Image Hardening,\hspace{2pt} Shift-Left Security
+    \item \textbf{DevOps \& SRE:} Kubernetes,\hspace{2pt} Docker,\hspace{2pt} Terraform,\hspace{2pt} AWS,\hspace{2pt} GitHub Actions,\hspace{2pt} ArgoCD,\hspace{2pt} GitOps,\hspace{2pt} Linux,\hspace{2pt} CI/CD,\hspace{2pt} Prometheus,\hspace{2pt} Grafana,\hspace{2pt} Loki,\hspace{2pt} OpenTelemetry,\hspace{2pt} Python,\hspace{2pt} Bash,\hspace{2pt} Golang,\hspace{2pt} MySQL,\hspace{2pt} Redis,\hspace{2pt} Infrastructure as Code,\hspace{2pt} Observability,\hspace{2pt} Incident Response,\hspace{2pt} SLI/SLO/SLA,\hspace{2pt} Root Cause Analysis
+\end{list}
+
+%-------------------------
+\section*{Education}
+
+\vspace{2pt}
+\textbf{B.Tech in Computer Science and Engineering} \hfill 2021 -- 2025 \\
+\textit{G.L. Bajaj Institute of Technology and Management, Greater Noida}
+
+\end{document}
