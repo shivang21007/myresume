@@ -67,12 +67,12 @@ DevSecOps \& Site Reliability Engineer with hands-on experience in embedding sec
 \vspace{2pt}
 \textbf{DevOps Engineer} $|$ \emph{Octro Inc., Noida} \hfill Sept 2024 -- Present
 \begin{itemize}
-    \item Integrated Trivy container scanning, Snyk dependency analysis, and compliance validations into CI/CD pipelines, identifying and remediating vulnerabilities before production deployment.
+    \item Integrated Trivy container scanning, Snyk dependency analysis, and compliance validations into CI/CD pipelines, proactively identifying vulnerabilities and reducing security risks by 80\% before production deployment.
     \item Engineered secure CI/CD pipelines via GitHub Actions and GitOps workflows with automated security gates, cutting deployment time by 50\% while achieving zero-downtime, policy-compliant releases.
-    \item Orchestrated scalable Kubernetes production workloads, leveraging rolling deployments, autoscaling (HPA), and ingress controllers to ensure high availability for microservices.
+    \item Orchestrated Kubernetes production workloads using rolling deployments, Horizontal Pod Autoscaling (HPA), and ingress controllers, achieving 99.9\% high availability for microservices.
     \item Provisioned AWS infrastructure (EC2, S3, IAM, Route53) using Terraform with least-privilege IAM policies and encrypted state management, reducing manual provisioning effort by 70\%.
-    \item Deployed a centralized observability stack (Prometheus, Grafana, Loki, OpenTelemetry) with security-focused alerting, streamlining production troubleshooting.
-    \item Automated toil-heavy operations and infrastructure workflows using Python and Bash, alongside implementing automated, encrypted MySQL backups for disaster recovery.
+    \item Deployed a centralized observability stack (Prometheus, Grafana, Loki, OpenTelemetry) with security-focused alerting, reducing Mean Time to Resolution (MTTR) by 40\%.
+    \item Streamlined toil-heavy infrastructure workflows using Python and Bash scripts, saving 10+ hours of manual work weekly, and established encrypted MySQL backups for reliable disaster recovery.
 \end{itemize}
 
 %-------------------------
@@ -83,15 +83,15 @@ DevSecOps \& Site Reliability Engineer with hands-on experience in embedding sec
 \begin{itemize}
     \item Built and deployed a production-grade 3-tier application (HTML/CSS/JS, Golang/Gin, MySQL) on Kubernetes with a fully automated DevSecOps CI/CD pipeline via GitHub Actions.
     \item Implemented multi-layered security scanning in CI: golangci-lint (SAST), Gitleaks (secret detection), govulncheck (dependency CVE scanning), Hadolint (Dockerfile linting), and Trivy (container image scanning).
-    \item Aggressively optimized Docker images using multi-stage builds and scratch runtime images, reducing frontend image from 92\,MB to 20\,MB and backend from 34\,MB to 12\,MB.
+    \item Aggressively optimized Docker images using multi-stage builds and scratch runtime images, reducing the frontend image size from 92\,MB to 20\,MB and the backend from 34\,MB to 12\,MB.
     \item Configured Kubernetes rolling deployments with HPA-based autoscaling, achieving fully automated code-to-production delivery with security validation at every gate.
 \end{itemize}
 
 \vspace{4pt}
 \textbf{End-to-End DevSecOps CI/CD Pipeline} \hfill \href{https://devops.shivanggupta.in:8443/}{\textit{Live}}
 \begin{itemize}
-    \item Architected a complete DevSecOps pipeline from scratch for a React/Node.js application, deploying on a VPS via Docker Compose with fully automated CI/CD through GitHub Actions.
-    \item Embedded security-first workflow: SAST checks (Lint + Snyk), dependency vulnerability scanning, secret leak detection, Dockerfile linting (Hadolint), and Trivy container scanning -- all as automated pipeline gates.
+    \item Architected a complete DevSecOps pipeline from scratch for a React/Node.js application, deploying to a VPS via Docker Compose with fully automated CI/CD through GitHub Actions.
+    \item Embedded a security-first workflow: SAST checks (Lint + Snyk), dependency vulnerability scanning, secret leak detection, Dockerfile linting (Hadolint), and Trivy container scanning -- all as automated pipeline gates.
     \item Identified and remediated 19 High and 2 Critical vulnerabilities by hardening base images and optimizing dependency layers before production deployment.
     \item Achieved a zero-manual-step delivery flow: Code $\rightarrow$ Security Checks $\rightarrow$ Image Build $\rightarrow$ Vulnerability Scan $\rightarrow$ Deployment.
 \end{itemize}
