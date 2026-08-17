@@ -5,8 +5,8 @@
 \documentclass[10pt, letterpaper]{article}
 
 \usepackage[
-    top=0.25in,
-    bottom=0.20in,
+    top=0.20in,
+    bottom=0.15in,
     left=0.4in,
     right=0.4in
 ]{geometry}
@@ -21,7 +21,15 @@
 \definecolor{linkblue}{rgb}{0.1, 0.27, 0.63}
 \hypersetup{
     colorlinks=true,
-    urlcolor=linkblue
+    urlcolor=linkblue,
+    pdftitle={Shivang Gupta - DevOps Engineer},
+    pdfauthor={Shivang Gupta},
+    pdfsubject={DevOps Engineer Resume},
+    pdfkeywords={DevOps, Kubernetes, Docker, GitOps, Argo CD, GitLab CI, GitHub Actions,
+                 Jenkins, Terraform, Ansible, Helm, AWS, EC2, VPC, IAM, S3, ECR, Route 53,
+                 CI/CD, Infrastructure as Code, Prometheus, Grafana, Loki, Alertmanager,
+                 Observability, SRE, Site Reliability Engineering, Linux,
+                 Python, Bash, Go, DevSecOps, Trivy, SAST, Platform Engineering}
 }
 
 % Page Setup
@@ -33,18 +41,13 @@
 \emergencystretch=2em
 \sloppy
 
-\titleformat{\section}{\vspace{-5pt}\scshape\raggedright\large}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\titleformat{\section}{\vspace{-7pt}\scshape\raggedright\large}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
 
-
-\setlength{\leftmargini}{0.15in}
-
-% Itemize spacing patch
-% Itemize spacing
+% Compact, ATS-safe bullet lists (single column, no tables, no graphics)
+\setlength{\leftmargini}{0.16in}
 \makeatletter
-% Itemize spacing patch
 \let\olditemize\itemize
 \def\itemize{\olditemize\itemsep=1pt \parsep=0pt \parskip=0pt \topsep=1pt}
-
 \makeatother
 
 %-------------------------
@@ -52,76 +55,73 @@
 
 \begin{center}
     {\huge \textbf{Shivang Gupta}} \\ \vspace{5pt}
-    Noida, India \;|\; \href{mailto:shivanggupta2611@gmail.com}{shivanggupta2611@gmail.com} \;|\; +918081260068 \;|\;
+    Noida, India \;|\; \href{mailto:shivanggupta2611@gmail.com}{shivanggupta2611@gmail.com} \;|\; +91 80812 60068 \;|\;
     \href{https://shivanggupta.in}{Portfolio} \;|\; \href{https://www.linkedin.com/in/shivang21007/}{LinkedIn} \;|\; \href{https://github.com/shivang21007}{GitHub}
 \end{center}
 
 %-------------------------
-\section*{Professional Summary}
-\vspace{1pt}
-DevOps Engineer with hands-on experience building GitOps-based CI/CD platforms, Kubernetes infrastructure, and cloud automation for distributed systems. Experienced in AWS, Terraform, observability, and DevSecOps, with a focus on reliable software delivery and production platform engineering.
-
-\section*{Experience}
-
-\vspace{1pt}
-\textbf{DevOps Engineer} $|$ \emph{Octro Inc., Noida} \hfill Sept 2024 -- Present
-\begin{itemize}
-    \item Designed and implemented a GitOps-based CI/CD platform for a \textbf{55+ microservice} Java Spring Boot gaming application, replacing a legacy manual Tomcat-based deployment workflow with GitLab CI, Docker, AWS ECR, Argo CD, and Kubernetes, cutting deployment time from \textbf{1--2 hours to under 20 minutes}.
-    \item Automated end-to-end delivery on merges to \texttt{main}: building and scanning Docker images, publishing to ECR, updating Kubernetes manifests, and triggering Argo CD syncs, eliminating manual packaging and deployment steps.
-    \item Containerized Spring Boot services and deployed workloads on an on-premises \textbf{kubeadm} cluster using rolling updates, liveness/readiness probes, ingress routing, resource limits, and autoscaling for reliable, zero-downtime releases.
-    \item Hardened the delivery pipeline with SAST, SCA, secret detection, Dockerfile linting, and Trivy image scanning as OWASP Top 10-aligned quality gates, and centralized application secret management across environments.
-    \item Provisioned AWS infrastructure across EC2, S3, IAM, and Route53 using reusable Terraform modules with remote state (S3 backend + DynamoDB locking), reducing manual provisioning and configuration effort by \textbf{70\%}.
-    \item Built centralized observability with Prometheus, Alertmanager, Grafana, Loki, and OpenTelemetry across Kubernetes and application workloads, reducing MTTR by \textbf{40\%} through unified metrics, logs, traces, and alerting.
-    \item Collaborated with backend engineers to modernize deployment workflows for a distributed platform built on WebSockets, RabbitMQ, MongoDB, Redis, and ZooKeeper, improving release reliability and developer productivity.
-\end{itemize}
+\section*{Summary}
+\vspace{0pt}
+DevOps Engineer with 2 years of experience running production Kubernetes and CI/CD for a high-traffic gaming platform of \textbf{55+ Java microservices}. Replaced a manual Tomcat release process with a GitOps pipeline on GitLab CI, Argo CD, and AWS, cutting deployment time from \textbf{1--2 hours to under 20 minutes}. Works across Terraform-managed AWS infrastructure, Linux, Prometheus and Grafana observability, alerting, and pipeline security.
 
 %-------------------------
-\section*{Projects}
-
-\vspace{1pt}
-\textbf{SkillPulse -- Production Kubernetes Platform} \hfill \href{https://devops.shivanggupta.in:8443/}{\textit{Live}}
-\begin{itemize}
-    \item Built and deployed a live production 3-tier application (HTML/CSS/JS, Golang/Gin, MySQL) on Kubernetes, delivered end-to-end through a fully automated GitHub Actions source-to-production pipeline.
-    \item Optimized Docker builds using multi-stage images and scratch runtime images, reducing frontend image size from \textbf{92\,MB} to \textbf{20\,MB} and backend image size from \textbf{34\,MB} to \textbf{12\,MB}.
-    \item Implemented rolling deployments, HPA autoscaling, service exposure, and security gates with golangci-lint, Gitleaks, govulncheck, Hadolint, and Trivy for zero-manual-step releases.
-\end{itemize}
-
-\vspace{1pt}
-\textbf{Automated DevSecOps Pipeline} \hfill \href{https://devops.shivanggupta.in:8443/}{\textit{Live}}
-\begin{itemize}
-    \item Built an end-to-end GitHub Actions pipeline for a React/Node.js application, automating build, scanning, image publishing, and VPS deployment via Docker Compose for hands-off releases.
-    \item Embedded SAST, dependency scanning, secret detection, Dockerfile linting, and Trivy gates, remediating \textbf{19 High} and \textbf{2 Critical} vulnerabilities by hardening base images and dependencies.
-\end{itemize}
-
-%-------------------------
-\section*{Core Skills}
-
-\vspace{1pt}
+\section*{Technical Skills}
+\vspace{0pt}
 \begin{list}{}{%
     \setlength{\leftmargin}{0pt}%
     \setlength{\itemindent}{0pt}%
     \setlength{\labelwidth}{0pt}%
     \setlength{\labelsep}{0pt}%
     \setlength{\topsep}{2pt}%
-    \setlength{\itemsep}{2pt}%
+    \setlength{\itemsep}{1pt}%
     \setlength{\parsep}{0pt}%
 }
-    \item \textbf{Cloud:} AWS (EC2, IAM, VPC, S3, Route53, ECR, CloudWatch, ALB) \;|\; \textbf{Containers:} Kubernetes, kubeadm, Docker, Helm, Argo CD \;|\; \textbf{OS:} Linux
-    \item \textbf{CI/CD \& IaC:} GitLab CI, GitHub Actions, Jenkins, GitOps, Terraform, Docker Compose \;|\; \textbf{Observability:} Prometheus, Alertmanager, Grafana, Loki, OpenTelemetry
-    \item \textbf{DevSecOps:} SAST, SCA, Trivy, Snyk, Gitleaks, Hadolint, Vault, OWASP \;|\; \textbf{Scripting:} Python, Bash, Go, Git \;|\; \textbf{Data:} MySQL, MongoDB, Redis, RabbitMQ, ZooKeeper
+    \item \textbf{Cloud \& OS:} AWS (EC2, VPC, IAM, S3, ECR, Route 53, ALB, CloudWatch), Linux/Unix (Ubuntu, RHEL), Networking, DNS, TLS/SSL
+    \item \textbf{Containers \& Orchestration:} Kubernetes (kubeadm, self-managed), Docker, Helm, Argo CD, HPA/Autoscaling, NGINX Ingress, Docker Compose
+    \item \textbf{CI/CD \& IaC:} GitLab CI, GitHub Actions, Jenkins, GitOps, Terraform, Ansible, Git, YAML, Agile/Scrum, Jira
+    \item \textbf{Observability \& Reliability:} Prometheus, Alertmanager, Grafana, Loki, Alerting, High Availability, Incident Response, Root Cause Analysis (RCA), Runbooks
+    \item \textbf{Languages \& Data:} Python, Bash/Shell, Go, SQL \;|\; MySQL, MongoDB, Redis, RabbitMQ, ZooKeeper, Distributed Systems
 \end{list}
 
 %-------------------------
-\section*{Education}
-
-\vspace{1pt}
-\textbf{B.Tech in Computer Science and Engineering} \hfill 2021 -- 2025 \\
-\textit{G.L. Bajaj Institute of Technology and Management, Greater Noida}
+\section*{Experience}
+\vspace{0pt}
+\textbf{DevOps Engineer} $|$ \emph{Octro Inc., Noida} \hfill Sept 2024 -- Present
+\begin{itemize}
+    \item Replaced a manual Tomcat release process with a GitOps platform for \textbf{55+ Java Spring Boot microservices}: on merge to main, GitLab CI builds and scans the image, pushes it to AWS ECR, bumps the manifest tag, and Argo CD syncs it to Kubernetes, cutting release time from \textbf{1--2 hours to under 20 minutes} and removing all manual packaging and file copying.
+    \item Ran workloads on a self-managed \textbf{kubeadm} cluster using canary and rolling update strategies, liveness/readiness probes, resource limits, NGINX ingress, and HPA, holding \textbf{99.9\% availability} with no user-facing downtime during deploys.
+    \item Packaged services as Helm charts with per-environment values for dev, staging, and production, cutting new-service onboarding from a day of copy-pasted YAML to about an hour.
+    \item Provisioned AWS across EC2, VPC, IAM, S3, and Route 53 with reusable Terraform modules and remote state in S3 with DynamoDB locking, which cut manual provisioning and configuration work by roughly \textbf{70\%}.
+    \item Built the monitoring stack on Prometheus, Alertmanager, Grafana, and Loki for metrics, logs, and alerting; alert routing and per-service dashboards brought \textbf{MTTR down about 40\%}, with an RCA and runbook after each incident.
+    \item Added blocking security gates to the pipeline (SAST, dependency CVE scanning, Gitleaks, Hadolint, Trivy) and moved application secrets out of repositories into per-environment Kubernetes Secrets.
+    \item Wrote \textbf{Python} and \textbf{Bash} automation for log cleanup, disk and service health checks, and scheduled shutdown of idle dev instances, saving \textbf{10+ hours a week} and lowering AWS cost, plus encrypted MySQL backups with restore drills.
+\end{itemize}
 
 %-------------------------
-\section*{Achievements \& Certifications}
+\section*{Projects}
+\vspace{0pt}
+\textbf{AWS EC2 Instance Manager -- Scheduled Dev Fleet Start/Stop} \hfill \href{https://github.com/shivang21007/aws-ec2-instance-manager}{\textit{GitHub}}
+\begin{itemize}
+    \item Designed and implemented an AWS instance manager for \textbf{15 LTS dev instances} across 5 environments, scheduling their startup and shutdown on cron to cut infrastructure cost, taking each instance from 168 to \textbf{45 running hours a week} and removing \textbf{\textasciitilde 73\% of idle compute hours}.
+    \item Built the tool in \textbf{Python 3} driving the \textbf{AWS CLI} to control dev environment instances, reading live instance state before every action so repeated runs stay idempotent and safe to retry from cron.
+    \item Implemented ordered startup and shutdown (infra before app instances, reversed on stop) with a configurable settle delay, multiple CLI flags, and a config file defining the environments, plus per-instance error isolation and non-zero exit codes for alerting.
+\end{itemize}
 
-\vspace{1pt}
-\textbf{Certified DevOps Engineer Associate} -- TrainWithShubham - \href{https://credentials.certdirectory.io/verify/CRD-8FFHEZGG}{CRD-8FFHEZGG} \hfill Issued May 2026 -- Expires May 2030
+\vspace{2pt}
+\textbf{SkillPulse -- 3-Tier App on Kubernetes with GitHub Actions CI/CD} \hfill \href{https://github.com/shivang21007/github-actions-kubernetes-masterclass}{\textit{GitHub}}
+\begin{itemize}
+    \item Built a Go/Gin, MySQL, and static-frontend app and shipped it to Kubernetes through a GitHub Actions pipeline in under two minutes per push; multi-stage scratch builds cut the frontend from \textbf{92 MB to 20 MB} and the backend from \textbf{34 MB to 12 MB}.
+    \item Gated every build on SAST (golangci-lint), dependency CVE scanning (govulncheck), secret detection (Gitleaks), Dockerfile linting (Hadolint), and container image scanning (Trivy), with a failed scan blocking the deploy.
+\end{itemize}
+
+%-------------------------
+\section*{Education}
+\vspace{0pt}
+\textbf{B.Tech, Computer Science and Engineering} \;|\; \textit{G.L. Bajaj Institute of Technology and Management} \hfill 2021 -- 2025
+
+%-------------------------
+\section*{Certifications}
+\vspace{0pt}
+\textbf{Certified DevOps Engineer Associate}, TrainWithShubham \;|\; \href{https://credentials.certdirectory.io/verify/CRD-8FFHEZGG}{CRD-8FFHEZGG} \hfill May 2026
 
 \end{document}
